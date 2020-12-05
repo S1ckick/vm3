@@ -16,6 +16,7 @@ void fast2Sum(double a, double b, double *s, double *t) {
     *t= b-z;
 }
 
+/*
 void TwoSum(double a, double b, double *s, double *t){
     *s = a + b;
     double a_ = *s - b;
@@ -24,6 +25,7 @@ void TwoSum(double a, double b, double *s, double *t){
     double del_b = b - b_;
     *t = del_a + del_b;
 }
+ */
 
 void dekkerSum(double x_h, double x_l, double y_h, double y_l, double *t_h, double *t_l){
     double r_h;
