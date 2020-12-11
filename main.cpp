@@ -92,7 +92,7 @@ static const double inv_fact[n_inv_fact][2] = {
 };
 
 void sin_taylor(double a_h, double a_l, double *res_h, double *res_l){
-    if(a_h == 0.0)
+    if(a_h == 0.0 && a_l == 0.0)
     {
         *res_h = 0.0;
         *res_l = 0.0;
@@ -140,8 +140,8 @@ static const double sin_table [4][2] = {
 int main() {
     std::fesetround(FE_TONEAREST);
 
-    double some_pi_h = 1.963495408493620697e-01;
-    double some_pi_l = 7.654042494670957545e-18;
+    double some_pi_h = 0.0;
+    double some_pi_l = 1e-20;
 
     double res_sin_h,res_sin_l;
     sin_taylor(some_pi_h,some_pi_l,&res_sin_h,&res_sin_l);
